@@ -19,7 +19,7 @@ $ touch index.js
 
 ### 3. Abrimos el archivo y creamos nuestra app web básica.
 
- ``` [js]
+ ```javascript
 var express = require('express')
 var app = express()
 
