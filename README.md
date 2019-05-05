@@ -32,4 +32,50 @@ app.listen(8081, function () {
 })
  ```
 
+### 4. (Opcional) Probar nuestro servidor, con localhost:8081 en el navegador 
+
+`$ node index.js`
+
+## Comenzamos con la parte de Docker 
+
+### 5. Creamos un Dockerfile
+
+` $touch Dockerfile`
+
+### 6. Agregamos nuestra receta en el Dockerfile
+
+```
+FROM node:7
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD node index.js
+EXPOSE 8082
+```
+
+La primera línea le dice a Docker que use otra imagen de Docker como plantilla para la imagen que estamos creando.
+
+Lo que estamos usando es la imagen oficial de Docker para Node.js y su versión 7 de esa imagen.
+
+La segunda línea, establece un directorio de trabajo donde el código de la aplicación vivirá dentro del contenedor Docker.
+
+En las líneas 3, 4 y 5, le pedimos a Docker que copie nuestros archivos locales en el directorio de trabajo del contenedor y que ejecute npm para instalar cualquier dependencia de paquete.
+
+En la línea 6, le pedimos a la ventana acoplable que ejecute nuestra aplicación dentro del contenedor usando un nodo para ejecutar nuestro archivo index.js.
+
+Por último, en la línea 7, configuramos el puerto que Docker expondrá cuando el contenedor se esté ejecutando. Puerto 8082 en nuestro caso.
+
+NOTA: La aplicación Node.js usa el puerto 8081 pero usará ese puerto dentro del contenedor Docker cuando el contenedor se esté ejecutando.
+
+### 7. Constrior imagen de Docker 
+
+`$ docker build -t hola-world .`
+
+### 8. Ejecutar nuestro contenedor Docker.
+
+`$ docker run -p 8082: 8081 hello-world`
+
+
+
 
