@@ -11,4 +11,25 @@ $ npm init
 $ npm install —save express
 ```
 
+### 2. Creamos un archivo index.js para nuestro codigo. 
+
+`
+$ touch index.js
+`
+
+### 3. Abrimos el archivo y creamos nuestra app web básica.
+
+ ``` [javascript]
+var express = require('express')
+var app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+app.listen(8081, function () {
+  console.log('app listening on port 8081!')
+})
+ ```
+
 
