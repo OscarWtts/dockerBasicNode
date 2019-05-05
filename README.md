@@ -74,7 +74,7 @@ NOTA: La aplicación Node.js usa el puerto 8081 pero usará ese puerto dentro de
 
 ### 8. Ejecutar nuestro contenedor Docker.
 
-`$ docker run -p 8082: 8081 hello-world`
+`$ docker run -p 8082:8081 hello-world`
 
 
 
