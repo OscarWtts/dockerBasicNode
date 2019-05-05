@@ -1,0 +1,22 @@
+{
+  "name": "docker-basic-node",
+  "version": "1.0.0",
+  "description": "Only creates a basic \"Hello world app\" with Node and Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarWtts/dockerBasicNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarWtts/dockerBasicNode/issues"
+  },
+  "homepage": "https://github.com/OscarWtts/dockerBasicNode#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
